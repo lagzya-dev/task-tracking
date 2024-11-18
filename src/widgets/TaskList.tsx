@@ -16,14 +16,11 @@ export default function TaskList() {
   });
   function selectFilter(filter: EFilterType) {
     setFilter(filter);
-    console.log(filter);
   }
   function handleClickName(name: string) {
-    console.log(name);
     TaskService.changeStatus(name);
   }
   function handleClickDelete(name: string) {
-    console.log(name);
     TaskService.remove(name);
   }
   return (
