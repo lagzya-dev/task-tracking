@@ -7,7 +7,7 @@ export function CreateTask() {
   const [value, setValue] = useState('');
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (value) {
+    if (value && value.length <= 150) {
       TaskService.create(new Task(value));
       setValue('');
     }
